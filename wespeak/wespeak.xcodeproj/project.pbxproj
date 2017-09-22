@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5ABDCE061F751E220009B66B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDCE051F751E220009B66B /* AppDelegate.swift */; };
+		5ABDCE081F751E220009B66B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDCE071F751E220009B66B /* LoginViewController.swift */; };
+		5ABDCE0B1F751E220009B66B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ABDCE091F751E220009B66B /* Main.storyboard */; };
+		5ABDCE0D1F751E220009B66B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ABDCE0C1F751E220009B66B /* Assets.xcassets */; };
+		5ABDCE101F751E220009B66B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ABDCE0E1F751E220009B66B /* LaunchScreen.storyboard */; };
+		5ABDCE1D1F7523BE0009B66B /* FacebookLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDCE1C1F7523BE0009B66B /* FacebookLoginButton.swift */; };
+		5ABDCE1F1F7523D40009B66B /* FacebookLoginButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ABDCE1E1F7523D40009B66B /* FacebookLoginButton.xib */; };
+		5ABDCE221F752ABA0009B66B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDCE211F752ABA0009B66B /* Extensions.swift */; };
+		B1DF397DFBFE4518CFCBB5C4 /* Pods_wespeak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8FE7196325CCE32DFD69B7 /* Pods_wespeak.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0F8FE7196325CCE32DFD69B7 /* Pods_wespeak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wespeak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3395349411E1375CD5EB9286 /* Pods-wespeak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wespeak.release.xcconfig"; path = "Pods/Target Support Files/Pods-wespeak/Pods-wespeak.release.xcconfig"; sourceTree = "<group>"; };
+		5ABDCE021F751E220009B66B /* wespeak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wespeak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ABDCE051F751E220009B66B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5ABDCE071F751E220009B66B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5ABDCE0A1F751E220009B66B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5ABDCE0C1F751E220009B66B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5ABDCE0F1F751E220009B66B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5ABDCE111F751E220009B66B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5ABDCE1C1F7523BE0009B66B /* FacebookLoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginButton.swift; sourceTree = "<group>"; };
+		5ABDCE1E1F7523D40009B66B /* FacebookLoginButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FacebookLoginButton.xib; sourceTree = "<group>"; };
+		5ABDCE211F752ABA0009B66B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A5F268CC91420C59A57E2AE4 /* Pods-wespeak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wespeak.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wespeak/Pods-wespeak.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5ABDCDFF1F751E220009B66B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1DF397DFBFE4518CFCBB5C4 /* Pods_wespeak.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5ABDCDF91F751E220009B66B = {
+			isa = PBXGroup;
+			children = (
+				C4BA324443976917E7294CAD /* Frameworks */,
+				5AC9D9C6D79844E88A79715A /* Pods */,
+				5ABDCE031F751E220009B66B /* Products */,
+				5ABDCE041F751E220009B66B /* wespeak */,
+			);
+			sourceTree = "<group>";
+		};
+		5ABDCE031F751E220009B66B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5ABDCE021F751E220009B66B /* wespeak.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5ABDCE041F751E220009B66B /* wespeak */ = {
+			isa = PBXGroup;
+			children = (
+				5ABDCE201F752A980009B66B /* Extensions */,
+				5ABDCE171F7521610009B66B /* Models */,
+				5ABDCE1A1F7521840009B66B /* Storyboards */,
+				5ABDCE181F75216B0009B66B /* ViewControllers */,
+				5ABDCE191F7521790009B66B /* Views */,
+				5ABDCE051F751E220009B66B /* AppDelegate.swift */,
+				5ABDCE0C1F751E220009B66B /* Assets.xcassets */,
+				5ABDCE111F751E220009B66B /* Info.plist */,
+				5ABDCE0E1F751E220009B66B /* LaunchScreen.storyboard */,
+			);
+			path = wespeak;
+			sourceTree = "<group>";
+		};
+		5ABDCE171F7521610009B66B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5ABDCE181F75216B0009B66B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5ABDCE071F751E220009B66B /* LoginViewController.swift */,
+			);
+			name = ViewControllers;
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5ABDCE191F7521790009B66B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5ABDCE1C1F7523BE0009B66B /* FacebookLoginButton.swift */,
+				5ABDCE1E1F7523D40009B66B /* FacebookLoginButton.xib */,
+			);
+			name = Views;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5ABDCE1A1F7521840009B66B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5ABDCE091F751E220009B66B /* Main.storyboard */,
+			);
+			name = Storyboards;
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5ABDCE201F752A980009B66B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5ABDCE211F752ABA0009B66B /* Extensions.swift */,
+			);
+			name = Extensions;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5AC9D9C6D79844E88A79715A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5F268CC91420C59A57E2AE4 /* Pods-wespeak.debug.xcconfig */,
+				3395349411E1375CD5EB9286 /* Pods-wespeak.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C4BA324443976917E7294CAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F8FE7196325CCE32DFD69B7 /* Pods_wespeak.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5ABDCE011F751E220009B66B /* wespeak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5ABDCE141F751E220009B66B /* Build configuration list for PBXNativeTarget "wespeak" */;
+			buildPhases = (
+				2854214760986B89F501FD26 /* [CP] Check Pods Manifest.lock */,
+				5ABDCDFE1F751E220009B66B /* Sources */,
+				5ABDCDFF1F751E220009B66B /* Frameworks */,
+				5ABDCE001F751E220009B66B /* Resources */,
+				9E0CE32C39FC2D74FA364256 /* [CP] Embed Pods Frameworks */,
+				EDEC538EEAC2F156AF86FA75 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wespeak;
+			productName = wespeak;
+			productReference = 5ABDCE021F751E220009B66B /* wespeak.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5ABDCDFA1F751E220009B66B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Quoc Huy Ngo";
+				TargetAttributes = {
+					5ABDCE011F751E220009B66B = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 589Z4L567V;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5ABDCDFD1F751E220009B66B /* Build configuration list for PBXProject "wespeak" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5ABDCDF91F751E220009B66B;
+			productRefGroup = 5ABDCE031F751E220009B66B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5ABDCE011F751E220009B66B /* wespeak */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5ABDCE001F751E220009B66B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ABDCE101F751E220009B66B /* LaunchScreen.storyboard in Resources */,
+				5ABDCE0D1F751E220009B66B /* Assets.xcassets in Resources */,
+				5ABDCE0B1F751E220009B66B /* Main.storyboard in Resources */,
+				5ABDCE1F1F7523D40009B66B /* FacebookLoginButton.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2854214760986B89F501FD26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-wespeak-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E0CE32C39FC2D74FA364256 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-wespeak/Pods-wespeak-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wespeak/Pods-wespeak-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDEC538EEAC2F156AF86FA75 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wespeak/Pods-wespeak-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5ABDCDFE1F751E220009B66B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ABDCE081F751E220009B66B /* LoginViewController.swift in Sources */,
+				5ABDCE061F751E220009B66B /* AppDelegate.swift in Sources */,
+				5ABDCE1D1F7523BE0009B66B /* FacebookLoginButton.swift in Sources */,
+				5ABDCE221F752ABA0009B66B /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5ABDCE091F751E220009B66B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5ABDCE0A1F751E220009B66B /* Base */,
+			);
+			name = Main.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+		5ABDCE0E1F751E220009B66B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5ABDCE0F1F751E220009B66B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5ABDCE121F751E220009B66B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5ABDCE131F751E220009B66B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5ABDCE151F751E220009B66B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5F268CC91420C59A57E2AE4 /* Pods-wespeak.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 589Z4L567V;
+				INFOPLIST_FILE = wespeak/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = quochuyngo.wespeak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5ABDCE161F751E220009B66B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3395349411E1375CD5EB9286 /* Pods-wespeak.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 589Z4L567V;
+				INFOPLIST_FILE = wespeak/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = quochuyngo.wespeak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5ABDCDFD1F751E220009B66B /* Build configuration list for PBXProject "wespeak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ABDCE121F751E220009B66B /* Debug */,
+				5ABDCE131F751E220009B66B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5ABDCE141F751E220009B66B /* Build configuration list for PBXNativeTarget "wespeak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ABDCE151F751E220009B66B /* Debug */,
+				5ABDCE161F751E220009B66B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5ABDCDFA1F751E220009B66B /* Project object */;
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FacebookLoginButton" customModule="wespeak" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="8Wz-7U-b3Z"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_fb" translatesAutoresizingMaskIntoConstraints="NO" id="EXC-Ng-0qs">
+                    <rect key="frame" x="83.5" y="19" width="22" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="SwZ-52-1Gz"/>
+                        <constraint firstAttribute="width" constant="22" id="bZ5-Zc-Qgc"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Continue with Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kc-5C-v0Q">
+                    <rect key="frame" x="119.5" y="20.5" width="172.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.2627450980392157" green="0.38039215686274508" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="6Kc-5C-v0Q" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bEy-6I-fMJ"/>
+                <constraint firstItem="6Kc-5C-v0Q" firstAttribute="leading" secondItem="EXC-Ng-0qs" secondAttribute="trailing" constant="14" id="feT-qZ-FRT"/>
+                <constraint firstItem="6Kc-5C-v0Q" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="18" id="gJ5-zY-wXn"/>
+                <constraint firstItem="EXC-Ng-0qs" firstAttribute="centerY" secondItem="6Kc-5C-v0Q" secondAttribute="centerY" id="hvR-IQ-ikg"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="57.5" y="-45.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_fb" width="21" height="21"/>
+    </resources>
+</document>
