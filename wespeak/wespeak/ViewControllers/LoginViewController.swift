@@ -17,6 +17,9 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func onTapLogin(_ sender: UIButton) {
+        let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UpdateProfileVC") as! UpdateProfileViewController
+        
+        present(vc, animated: true, completion: nil)
     }
 }
 
