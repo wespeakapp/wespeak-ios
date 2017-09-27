@@ -16,6 +16,9 @@
 		5A40EF891F7A449700059D12 /* CancelButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A40EF881F7A449700059D12 /* CancelButton.xib */; };
 		5A40EF8B1F7A44B700059D12 /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EF8A1F7A44B700059D12 /* CancelButton.swift */; };
 		5A40EF8D1F7B57B900059D12 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EF8C1F7B57B900059D12 /* ReviewViewController.swift */; };
+		5A40EF8F1F7BA0C800059D12 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EF8E1F7BA0C800059D12 /* ProfileViewController.swift */; };
+		5A40EF921F7BAE7300059D12 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EF901F7BAE7300059D12 /* ProfileCell.swift */; };
+		5A40EF931F7BAE7300059D12 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A40EF911F7BAE7300059D12 /* ProfileCell.xib */; };
 		5AA591C51F760AC500A30614 /* UpdateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA591C41F760AC500A30614 /* UpdateProfileViewController.swift */; };
 		5AA591C71F760EA400A30614 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA591C61F760EA400A30614 /* Color.swift */; };
 		5AA591C91F76486E00A30614 /* FindPartnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA591C81F76486E00A30614 /* FindPartnerViewController.swift */; };
@@ -44,6 +47,9 @@
 		5A40EF881F7A449700059D12 /* CancelButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CancelButton.xib; sourceTree = "<group>"; };
 		5A40EF8A1F7A44B700059D12 /* CancelButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelButton.swift; sourceTree = "<group>"; };
 		5A40EF8C1F7B57B900059D12 /* ReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		5A40EF8E1F7BA0C800059D12 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		5A40EF901F7BAE7300059D12 /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		5A40EF911F7BAE7300059D12 /* ProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		5AA591C41F760AC500A30614 /* UpdateProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewController.swift; sourceTree = "<group>"; };
 		5AA591C61F760EA400A30614 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		5AA591C81F76486E00A30614 /* FindPartnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPartnerViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +129,7 @@
 				5AA591C81F76486E00A30614 /* FindPartnerViewController.swift */,
 				5A40EF7F1F78F8BB00059D12 /* CallViewController.swift */,
 				5A40EF8C1F7B57B900059D12 /* ReviewViewController.swift */,
+				5A40EF8E1F7BA0C800059D12 /* ProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -140,6 +147,8 @@
 				5A40EF861F79667500059D12 /* EndCallPopup.swift */,
 				5A40EF881F7A449700059D12 /* CancelButton.xib */,
 				5A40EF8A1F7A44B700059D12 /* CancelButton.swift */,
+				5A40EF901F7BAE7300059D12 /* ProfileCell.swift */,
+				5A40EF911F7BAE7300059D12 /* ProfileCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -248,6 +257,7 @@
 				5A40EF891F7A449700059D12 /* CancelButton.xib in Resources */,
 				5ABDCE0B1F751E220009B66B /* Main.storyboard in Resources */,
 				5ABDCE1F1F7523D40009B66B /* FacebookLoginButton.xib in Resources */,
+				5A40EF931F7BAE7300059D12 /* ProfileCell.xib in Resources */,
 				5A40EF851F79665B00059D12 /* EndCallPopup.xib in Resources */,
 				5A40EF7C1F78F2AC00059D12 /* MatchedPopup.xib in Resources */,
 			);
@@ -348,6 +358,8 @@
 				5A40EF821F78F9FC00059D12 /* ScreenSize.swift in Sources */,
 				5ABDCE221F752ABA0009B66B /* Extensions.swift in Sources */,
 				5AA591C71F760EA400A30614 /* Color.swift in Sources */,
+				5A40EF8F1F7BA0C800059D12 /* ProfileViewController.swift in Sources */,
+				5A40EF921F7BAE7300059D12 /* ProfileCell.swift in Sources */,
 				5A40EF801F78F8BB00059D12 /* CallViewController.swift in Sources */,
 				5A40EF7E1F78F2C000059D12 /* MatchedPopup.swift in Sources */,
 			);
