@@ -53,7 +53,7 @@ class FindPartnerViewController: UIViewController {
             self.blurView.alpha = 1
             self.findPartnerButton.isEnabled = false
             self.findPartnerButton.backgroundColor = UIColor.clear
-            self.findPartnerButton.setTitle("Searching for partner", for: .normal)
+            self.findPartnerButton.setTitle("Searching...", for: .normal)
             self.titleLabel.text = self.titleFinding
             guard let tabbar = self.tabBarController?.tabBar else { return }
             tabbar.transform = CGAffineTransform(translationX: tabbar.frame.origin.x, y: tabbar.frame.height)
@@ -86,4 +86,6 @@ class FindPartnerViewController: UIViewController {
         progress.center = CGPoint(x: view.center.x, y: view.center.y + 25)
         view.addSubview(progress)
     }
+    
+    @IBAction func unwindToFindVC(segue:UIStoryboardSegue) { }
 }

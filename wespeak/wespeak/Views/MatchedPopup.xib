@@ -31,15 +31,15 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V0s-2u-Fyt">
                             <rect key="frame" x="67.5" y="186.5" width="240" height="294"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="ovT-qI-Coh">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user1" translatesAutoresizingMaskIntoConstraints="NO" id="ovT-qI-Coh">
                                     <rect key="frame" x="64" y="56" width="113" height="113"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="113" id="P6O-D2-dQR"/>
                                         <constraint firstAttribute="height" constant="113" id="qjO-mp-gIR"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jonth Henrry" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEw-s7-fDX">
-                                    <rect key="frame" x="68" y="187" width="105.5" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jesica " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cEw-s7-fDX">
+                                    <rect key="frame" x="93" y="187" width="55.5" height="21"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -109,6 +109,6 @@
     </objects>
     <resources>
         <image name="US" width="21" height="15"/>
-        <image name="avatar" width="480" height="321"/>
+        <image name="user1" width="226" height="150"/>
     </resources>
 </document>
