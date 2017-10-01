@@ -19,6 +19,8 @@
 		5A40EF8F1F7BA0C800059D12 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EF8E1F7BA0C800059D12 /* ProfileViewController.swift */; };
 		5A40EF921F7BAE7300059D12 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EF901F7BAE7300059D12 /* ProfileCell.swift */; };
 		5A40EF931F7BAE7300059D12 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A40EF911F7BAE7300059D12 /* ProfileCell.xib */; };
+		5A40EF951F7E012F00059D12 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EF941F7E012F00059D12 /* ConversationViewController.swift */; };
+		5A40EF971F7E038E00059D12 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EF961F7E038E00059D12 /* ConversationCell.swift */; };
 		5AA591C51F760AC500A30614 /* UpdateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA591C41F760AC500A30614 /* UpdateProfileViewController.swift */; };
 		5AA591C71F760EA400A30614 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA591C61F760EA400A30614 /* Color.swift */; };
 		5AA591C91F76486E00A30614 /* FindPartnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA591C81F76486E00A30614 /* FindPartnerViewController.swift */; };
@@ -50,6 +52,8 @@
 		5A40EF8E1F7BA0C800059D12 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5A40EF901F7BAE7300059D12 /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		5A40EF911F7BAE7300059D12 /* ProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
+		5A40EF941F7E012F00059D12 /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		5A40EF961F7E038E00059D12 /* ConversationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		5AA591C41F760AC500A30614 /* UpdateProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewController.swift; sourceTree = "<group>"; };
 		5AA591C61F760EA400A30614 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		5AA591C81F76486E00A30614 /* FindPartnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPartnerViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 				5A40EF7F1F78F8BB00059D12 /* CallViewController.swift */,
 				5A40EF8C1F7B57B900059D12 /* ReviewViewController.swift */,
 				5A40EF8E1F7BA0C800059D12 /* ProfileViewController.swift */,
+				5A40EF941F7E012F00059D12 /* ConversationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 				5A40EF8A1F7A44B700059D12 /* CancelButton.swift */,
 				5A40EF901F7BAE7300059D12 /* ProfileCell.swift */,
 				5A40EF911F7BAE7300059D12 /* ProfileCell.xib */,
+				5A40EF961F7E038E00059D12 /* ConversationCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -354,8 +360,10 @@
 				5A40EF8B1F7A44B700059D12 /* CancelButton.swift in Sources */,
 				5AA591CD1F76529C00A30614 /* MatchingView.swift in Sources */,
 				5AA591C51F760AC500A30614 /* UpdateProfileViewController.swift in Sources */,
+				5A40EF971F7E038E00059D12 /* ConversationCell.swift in Sources */,
 				5ABDCE1D1F7523BE0009B66B /* FacebookLoginButton.swift in Sources */,
 				5A40EF821F78F9FC00059D12 /* ScreenSize.swift in Sources */,
+				5A40EF951F7E012F00059D12 /* ConversationViewController.swift in Sources */,
 				5ABDCE221F752ABA0009B66B /* Extensions.swift in Sources */,
 				5AA591C71F760EA400A30614 /* Color.swift in Sources */,
 				5A40EF8F1F7BA0C800059D12 /* ProfileViewController.swift in Sources */,

@@ -32,5 +32,8 @@ class UpdateProfileViewController: UIViewController {
     }
 
     @IBAction func onTapUpdateProfile(_ sender: UIButton) {
+        let testController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbarController") as! UITabBarController
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = testController
     }
 }
