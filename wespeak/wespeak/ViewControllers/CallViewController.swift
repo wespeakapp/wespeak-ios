@@ -10,6 +10,8 @@ import UIKit
 
 class CallViewController: UIViewController {
 
+    @IBOutlet weak var micButton: UIButton!
+    @IBOutlet weak var videoButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         showMatchedPopup()
@@ -24,6 +26,22 @@ class CallViewController: UIViewController {
         let popup = MatchedPopup(frame: CGRect(x: 0, y: 0, width: Screen.size.width, height: Screen.size.height))
         self.view.addSubview(popup)
         popup.delegate = self
+    }
+    
+    @IBAction func turnoffMicAction(_ sender: UIButton) {
+        if !sender.isSelected {
+            sender.isSelected = true
+        } else {
+            sender.isSelected = false
+        }
+    }
+    
+    @IBAction func turnoffCameraAction(_ sender: UIButton) {
+        if !sender.isSelected {
+            sender.isSelected = true
+        } else {
+            sender.isSelected = false
+        }
     }
     
     @IBAction func endCallAction(_ sender: UIButton) {
@@ -41,6 +59,6 @@ extension CallViewController: MatchedPopupDelegate {
 
 extension CallViewController: EndCallPopupDelegate {
     func endCall() {
-        dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "ReviewVCSegue", sender: self)
     }
 }
