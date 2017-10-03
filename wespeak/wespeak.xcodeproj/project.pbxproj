@@ -21,6 +21,11 @@
 		5A40EF931F7BAE7300059D12 /* ProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A40EF911F7BAE7300059D12 /* ProfileCell.xib */; };
 		5A40EF951F7E012F00059D12 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EF941F7E012F00059D12 /* ConversationViewController.swift */; };
 		5A40EF971F7E038E00059D12 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EF961F7E038E00059D12 /* ConversationCell.swift */; };
+		5A40EF9A1F81D57B00059D12 /* SenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EF991F81D57B00059D12 /* SenderCell.swift */; };
+		5A40EF9C1F81D5B500059D12 /* ReceiverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EF9B1F81D5B500059D12 /* ReceiverCell.swift */; };
+		5A40EF9E1F81D7EE00059D12 /* DetailConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EF9D1F81D7EE00059D12 /* DetailConversationViewController.swift */; };
+		5A40EFA11F81F23400059D12 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EFA01F81F23400059D12 /* CustomNavigationController.swift */; };
+		5A40EFA31F828F6400059D12 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EFA21F828F6400059D12 /* CustomTabBarController.swift */; };
 		5AA591C51F760AC500A30614 /* UpdateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA591C41F760AC500A30614 /* UpdateProfileViewController.swift */; };
 		5AA591C71F760EA400A30614 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA591C61F760EA400A30614 /* Color.swift */; };
 		5AA591C91F76486E00A30614 /* FindPartnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA591C81F76486E00A30614 /* FindPartnerViewController.swift */; };
@@ -54,6 +59,11 @@
 		5A40EF911F7BAE7300059D12 /* ProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileCell.xib; sourceTree = "<group>"; };
 		5A40EF941F7E012F00059D12 /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		5A40EF961F7E038E00059D12 /* ConversationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
+		5A40EF991F81D57B00059D12 /* SenderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SenderCell.swift; sourceTree = "<group>"; };
+		5A40EF9B1F81D5B500059D12 /* ReceiverCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiverCell.swift; sourceTree = "<group>"; };
+		5A40EF9D1F81D7EE00059D12 /* DetailConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailConversationViewController.swift; sourceTree = "<group>"; };
+		5A40EFA01F81F23400059D12 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		5A40EFA21F828F6400059D12 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		5AA591C41F760AC500A30614 /* UpdateProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewController.swift; sourceTree = "<group>"; };
 		5AA591C61F760EA400A30614 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		5AA591C81F76486E00A30614 /* FindPartnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPartnerViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +145,9 @@
 				5A40EF8C1F7B57B900059D12 /* ReviewViewController.swift */,
 				5A40EF8E1F7BA0C800059D12 /* ProfileViewController.swift */,
 				5A40EF941F7E012F00059D12 /* ConversationViewController.swift */,
+				5A40EF9D1F81D7EE00059D12 /* DetailConversationViewController.swift */,
+				5A40EFA01F81F23400059D12 /* CustomNavigationController.swift */,
+				5A40EFA21F828F6400059D12 /* CustomTabBarController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -155,6 +168,8 @@
 				5A40EF901F7BAE7300059D12 /* ProfileCell.swift */,
 				5A40EF911F7BAE7300059D12 /* ProfileCell.xib */,
 				5A40EF961F7E038E00059D12 /* ConversationCell.swift */,
+				5A40EF991F81D57B00059D12 /* SenderCell.swift */,
+				5A40EF9B1F81D5B500059D12 /* ReceiverCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -352,18 +367,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A40EFA11F81F23400059D12 /* CustomNavigationController.swift in Sources */,
 				5A40EF871F79667500059D12 /* EndCallPopup.swift in Sources */,
 				5ABDCE081F751E220009B66B /* LoginViewController.swift in Sources */,
+				5A40EF9C1F81D5B500059D12 /* ReceiverCell.swift in Sources */,
+				5A40EF9E1F81D7EE00059D12 /* DetailConversationViewController.swift in Sources */,
 				5A40EF8D1F7B57B900059D12 /* ReviewViewController.swift in Sources */,
 				5AA591C91F76486E00A30614 /* FindPartnerViewController.swift in Sources */,
 				5ABDCE061F751E220009B66B /* AppDelegate.swift in Sources */,
 				5A40EF8B1F7A44B700059D12 /* CancelButton.swift in Sources */,
 				5AA591CD1F76529C00A30614 /* MatchingView.swift in Sources */,
 				5AA591C51F760AC500A30614 /* UpdateProfileViewController.swift in Sources */,
+				5A40EFA31F828F6400059D12 /* CustomTabBarController.swift in Sources */,
 				5A40EF971F7E038E00059D12 /* ConversationCell.swift in Sources */,
 				5ABDCE1D1F7523BE0009B66B /* FacebookLoginButton.swift in Sources */,
 				5A40EF821F78F9FC00059D12 /* ScreenSize.swift in Sources */,
 				5A40EF951F7E012F00059D12 /* ConversationViewController.swift in Sources */,
+				5A40EF9A1F81D57B00059D12 /* SenderCell.swift in Sources */,
 				5ABDCE221F752ABA0009B66B /* Extensions.swift in Sources */,
 				5AA591C71F760EA400A30614 /* Color.swift in Sources */,
 				5A40EF8F1F7BA0C800059D12 /* ProfileViewController.swift in Sources */,

@@ -15,6 +15,9 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         initCells()
         tableView.dataSource = self
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 100
+        tableView.reloadData()
     }
     
     func initCells() {
