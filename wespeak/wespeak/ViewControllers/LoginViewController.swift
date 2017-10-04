@@ -7,12 +7,11 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
 class LoginViewController: UIViewController {
 
-//    override var preferredStatusBarStyle: UIStatusBarStyle {
-//        return .lightContent
-//    }
+    var fbLoginManager = FBSDKLoginManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +20,22 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func onTapLogin(_ sender: UIButton) {
-        let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UpdateProfileVC") as! UpdateProfileViewController
-        
-        present(vc, animated: true, completion: nil)
+        fbLoginManager.logIn(withReadPermissions: ["email", "public_profile"], from: self) {
+            (result, error) in
+            
+            if error != nil {
+                return
+            }
+            
+            guard let result = result else { return }
+            if !result.isCancelled {
+                print(result.token.tokenString)
+                Token.token = result.token.tokenString
+                let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UpdateProfileVC") as! UpdateProfileViewController
+                self.present(vc, animated: true, completion: nil)
+
+            }
+        }
     }
 }
 
