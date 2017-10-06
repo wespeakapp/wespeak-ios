@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKLoginKit
+import MBProgressHUD
 
 class LoginViewController: UIViewController {
 
@@ -30,10 +31,22 @@ class LoginViewController: UIViewController {
             guard let result = result else { return }
             if !result.isCancelled {
                 print(result.token.tokenString)
-                Token.token = result.token.tokenString
-                let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UpdateProfileVC") as! UpdateProfileViewController
-                self.present(vc, animated: true, completion: nil)
-
+                let proressHub = MBProgressHUD.showAdded(to: self.view, animated: true)
+                proressHub.label.text = "Login..."
+                APIManager.shareInstance.loginFB(token: result.token.tokenString) {
+                    result in
+                    switch result {
+                    case .success(_):
+                        proressHub.hide(animated: true)
+                        let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UpdateProfileVC") as! UpdateProfileViewController
+                        self.present(vc, animated: true, completion: nil)
+                    case .failure(_):
+                        proressHub.hide(animated: true)
+                        break
+                    }
+                }
+            } else {
+                //Login fail
             }
         }
     }
