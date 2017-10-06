@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class UpdateProfileViewController: UIViewController {
 
@@ -17,6 +18,17 @@ class UpdateProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        APIManager.shareInstance.getUserInfo {
+            result in
+            switch result {
+            case .success(let user):
+                self.nameTextField.text = user.name
+                self.profileImageView.af_setImage(withURL: URL(string:user.profilePicture)!)
+                break
+            case .failure(let error):
+                break
+            }
+        }
     }
     
     func setupViews() {

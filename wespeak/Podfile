@@ -11,9 +11,12 @@ target 'wespeak' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Alamofire', '~> 4.4'
+  pod 'AlamofireImage', '~> 3.3'
+  pod 'Moya'
   pod 'OpenTok'
   pod 'MBProgressHUD', '~> 1.0'
   pod 'Cosmos'
   pod 'KDCircularProgress'
   pod 'FlagKit'
+  pod 'SwiftyJSON'
 end
