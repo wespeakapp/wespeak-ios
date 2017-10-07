@@ -8,6 +8,7 @@
 
 import UIKit
 import AlamofireImage
+import MBProgressHUD
 
 class UpdateProfileViewController: UIViewController {
 
@@ -18,7 +19,7 @@ class UpdateProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        APIManager.shareInstance.getUserInfo {
+        APIManager.shareInstance.getUser {
             result in
             switch result {
             case .success(let user):
@@ -44,8 +45,21 @@ class UpdateProfileViewController: UIViewController {
     }
 
     @IBAction func onTapUpdateProfile(_ sender: UIButton) {
-        let testController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbarController") as! UITabBarController
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController = testController
+        let user = User(name: nameTextField.text!, nativeLanguage: "Korean", about: "I want to imporove my english")
+        let proressHub = MBProgressHUD.showAdded(to: self.view, animated: true)
+        proressHub.label.text = "Updating..."
+        APIManager.shareInstance.updateUser(user: user) {
+            result in
+            proressHub.hide(animated: true)
+            switch result {
+                case .success(let user):
+                    print(user)
+                    let testController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbarController") as! UITabBarController
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    appDelegate.window?.rootViewController = testController
+                case .failure(let error):
+                    break
+            }
+        }
     }
 }

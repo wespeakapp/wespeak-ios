@@ -11,11 +11,14 @@ import Alamofire
 import Moya
 
 typealias TargetType = Moya.TargetType
+typealias Method = Moya.Method
+
 let Provider = MoyaProvider<APIService>(endpointClosure: endPointClosure)
 
 enum APIService {
     case LoginFB(token: String)
-    case GetUserInfo()
+    case GetUser()
+    case UpdateUser(user:User)
 }
 
 extension APIService: TargetType {
@@ -25,17 +28,21 @@ extension APIService: TargetType {
         switch self {
         case .LoginFB(_):
             return "login"
-        case .GetUserInfo():
+        case .GetUser():
             return "user/profile"
+        case .UpdateUser(_):
+            return "user"
         }
     }
     
-    public var method: Moya.Method {
+    public var method: Method {
         switch self {
         case .LoginFB(_):
             return .get
-        case .GetUserInfo():
+        case .GetUser():
             return .get
+        case .UpdateUser(_):
+            return .put
         }
     }
     
@@ -50,6 +57,12 @@ extension APIService: TargetType {
         switch self {
         case .LoginFB(let token):
             return .requestParameters(parameters: ["accessToken":token], encoding: URLEncoding.default)
+        case .UpdateUser(let user):
+            var params = [String:String]()
+            params["name"] = user.name
+            params["nativeLanguage"] = user.nativeLanguage
+            params["about"] = user.about
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
         default:
             return .requestPlain
         }

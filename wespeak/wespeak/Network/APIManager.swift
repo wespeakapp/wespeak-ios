@@ -11,8 +11,6 @@ import SwiftyJSON
 class APIManager {
     
     static let shareInstance = APIManager()
-    //var provider: MoyaProvider<APIService> = MoyaProvider(endpointClosure: endPointClosure)
-    
     
     func loginFB(token:String, completionHandle: @escaping (ResultType<String>) -> Void) {
         Provider.request(.LoginFB(token: token)) {
@@ -35,8 +33,24 @@ class APIManager {
         }
     }
     
-    func getUserInfo(completionHandle: @escaping (ResultType<User>) -> Void) {
-        Provider.request(.GetUserInfo()){ result in
+    func getUser(completionHandle: @escaping (ResultType<User>) -> Void) {
+        Provider.request(.GetUser()){ result in
+            switch result {
+            case let .success(response):
+                let data = JSON(response.data)["data"].dictionaryObject
+                let user = User.fromJSON(json: data!)
+                completionHandle(ResultType.success(user))
+                break
+            case let .failure(error):
+                completionHandle(ResultType.failure(ErrorType.SwiftError(error: error)))
+                break
+            }
+        }
+    }
+    
+    func updateUser(user:User, completionHandle: @escaping (ResultType<User>) -> Void) {
+        Provider.request(.UpdateUser(user: user)) {
+            result in
             switch result {
             case let .success(response):
                 let data = JSON(response.data)["data"].dictionaryObject

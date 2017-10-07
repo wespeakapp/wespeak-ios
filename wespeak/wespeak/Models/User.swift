@@ -17,6 +17,13 @@ struct User {
     var about: String = ""
     var profilePicture: String = ""
     
+    init() {}
+    
+    init(name:String, nativeLanguage:String, about:String) {
+        self.name = name
+        self.nativeLanguage = nativeLanguage
+        self.about = about
+    }
 }
 
 extension User {
