@@ -14,14 +14,23 @@ enum ResultType<T> {
 enum ErrorType {
     case NetworkError(statusCode: Int)
     case SwiftError(error: Error)
+    case InternalError(error: WSError)
     public var message: String {
         switch self {
             case .NetworkError(let code):
                 return "Network error: \(code)"
             case.SwiftError(let error):
                 return "Error: \(error)"
+            case .InternalError(let error):
+                return "\(error.statusCode): \(error.message)"
         }
     }
+}
+
+struct WSError {
+    var statusCode: Int
+    var error: String
+    var message: String
 }
 
 

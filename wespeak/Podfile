@@ -19,4 +19,5 @@ target 'wespeak' do
   pod 'KDCircularProgress'
   pod 'FlagKit'
   pod 'SwiftyJSON'
+
 end

@@ -9,6 +9,7 @@
 import Foundation
 import SwiftyJSON
 
+var currentUser = User()
 struct User {
     var id: String = ""
     var name: String = ""

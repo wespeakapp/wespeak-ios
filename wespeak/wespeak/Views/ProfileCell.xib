@@ -184,6 +184,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="nameLabel" destination="Pa1-nH-bHF" id="2DV-D3-FIC"/>
                 <outlet property="profileImage" destination="fve-2U-N2B" id="uaS-RX-zmb"/>
             </connections>
             <point key="canvasLocation" x="42" y="317"/>

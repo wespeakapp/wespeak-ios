@@ -37,8 +37,18 @@ class APIManager {
         Provider.request(.GetUser()){ result in
             switch result {
             case let .success(response):
-                let data = JSON(response.data)["data"].dictionaryObject
-                let user = User.fromJSON(json: data!)
+                guard let data = JSON(response.data)["data"].dictionaryObject else {
+                    //error
+                    let statusCode = JSON(response.data)["statusCode"].intValue
+                    let error = JSON(response.data)["error"].stringValue
+                    let message = JSON(response.data)["message"].stringValue
+                    print("\(statusCode): \(message)")
+                    let wsError = WSError(statusCode: statusCode, error: error, message: message)
+                    completionHandle(ResultType.failure(ErrorType.InternalError(error: wsError)))
+                    return
+                }
+                
+                let user = User.fromJSON(json: data)
                 completionHandle(ResultType.success(user))
                 break
             case let .failure(error):

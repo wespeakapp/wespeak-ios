@@ -12,6 +12,7 @@ import MBProgressHUD
 
 class UpdateProfileViewController: UIViewController {
 
+    @IBOutlet weak var languageButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var updateButton: UIButton!
@@ -19,6 +20,10 @@ class UpdateProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        getUser()
+    }
+    
+    func getUser() {
         APIManager.shareInstance.getUser {
             result in
             switch result {
@@ -44,6 +49,10 @@ class UpdateProfileViewController: UIViewController {
         updateButton.make(cornerRadius: radius)
     }
 
+    @IBAction func onTapLanguageButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "CountryPickerVC", sender: self)
+    }
+    
     @IBAction func onTapUpdateProfile(_ sender: UIButton) {
         let user = User(name: nameTextField.text!, nativeLanguage: "Korean", about: "I want to imporove my english")
         let proressHub = MBProgressHUD.showAdded(to: self.view, animated: true)
@@ -53,10 +62,10 @@ class UpdateProfileViewController: UIViewController {
             proressHub.hide(animated: true)
             switch result {
                 case .success(let user):
-                    print(user)
-                    let testController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabbarController") as! UITabBarController
+                    currentUser = user
+                    let rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
                     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                    appDelegate.window?.rootViewController = testController
+                    appDelegate.window?.rootViewController = rootVC
                 case .failure(let error):
                     break
             }

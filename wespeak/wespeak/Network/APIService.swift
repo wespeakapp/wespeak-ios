@@ -59,9 +59,15 @@ extension APIService: TargetType {
             return .requestParameters(parameters: ["accessToken":token], encoding: URLEncoding.default)
         case .UpdateUser(let user):
             var params = [String:String]()
-            params["name"] = user.name
-            params["nativeLanguage"] = user.nativeLanguage
-            params["about"] = user.about
+            if !user.name.isEmpty {
+                params["name"] = user.name
+            }
+            if !user.about.isEmpty {
+                params["about"] = user.about
+            }
+            if !user.nativeLanguage.isEmpty {
+                params["nativeLanguage"] = user.nativeLanguage
+            }
             return .requestParameters(parameters: params, encoding: JSONEncoding.default)
         default:
             return .requestPlain
