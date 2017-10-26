@@ -5,7 +5,7 @@
 //  Created by Quoc Huy Ngo on 10/6/17.
 //  Copyright © 2017 Quoc Huy Ngo. All rights reserved.
 //
-
+import SwiftyJSON
 enum ResultType<T> {
     case success(T)
     case failure(ErrorType)
@@ -31,6 +31,12 @@ struct WSError {
     var statusCode: Int
     var error: String
     var message: String
+    
+    init(json:JSON) {
+        statusCode = json["statusCode"].intValue
+        error = json["error"].stringValue
+        message = json["message"].stringValue
+    }
 }
 
 

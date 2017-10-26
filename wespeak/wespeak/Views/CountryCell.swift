@@ -12,7 +12,7 @@ class CountryCell: UITableViewCell {
 
     @IBOutlet weak var countryNameLabel: UILabel!
     @IBOutlet weak var flagImageView: UIImageView!
-    
+    var selectedCountry: ((_ countryCode: String) -> Void)?
     var country: Country? {
         didSet {
             let flag = Flag(countryCode: (country?.code)!)
@@ -22,13 +22,12 @@ class CountryCell: UITableViewCell {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        guard let country = country else { return }
+        selectedCountry?(country.code)
     }
 
 }

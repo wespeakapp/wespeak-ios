@@ -21,13 +21,13 @@ class APIManager {
                 let json = JSON(data)
                 if let token = json["access_token"].string {
                     Token.token = token
-                    completionHandle(ResultType.success(token))
+                    completionHandle(.success(token))
                 } else {
-                    completionHandle(ResultType.failure(ErrorType.NetworkError(statusCode: 400)))
+                    completionHandle(.failure(ErrorType.InternalError(error: WSError(json: json))))
                 }
                 break
             case .failure(let error):
-                completionHandle(ResultType.failure(ErrorType.SwiftError(error: error)))
+                completionHandle(.failure(ErrorType.SwiftError(error: error)))
                 break
             }
         }
@@ -38,12 +38,8 @@ class APIManager {
             switch result {
             case let .success(response):
                 guard let data = JSON(response.data)["data"].dictionaryObject else {
-                    //error
-                    let statusCode = JSON(response.data)["statusCode"].intValue
-                    let error = JSON(response.data)["error"].stringValue
-                    let message = JSON(response.data)["message"].stringValue
-                    print("\(statusCode): \(message)")
-                    let wsError = WSError(statusCode: statusCode, error: error, message: message)
+                    let json = JSON(response.data)
+                    let wsError = WSError(json: json)
                     completionHandle(ResultType.failure(ErrorType.InternalError(error: wsError)))
                     return
                 }

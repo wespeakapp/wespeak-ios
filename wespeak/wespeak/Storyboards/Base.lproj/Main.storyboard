@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="i0b-Ct-6vD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bRi-q5-F4A">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -53,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DMe-uG-fwp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2255.625" y="673.94366197183103"/>
+            <point key="canvasLocation" x="-2670" y="1696"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+            <point key="canvasLocation" x="-2670" y="967"/>
         </scene>
         <!--Conversation-->
         <scene sceneID="6sx-p6-xVI">
@@ -326,7 +326,7 @@
                         <barButtonItem title="Item" id="qYE-UP-Ky6"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="WHE-NZ-dHg">
-                        <barButtonItem key="leftBarButtonItem" image="Back Arrow" id="K04-d9-GP0">
+                        <barButtonItem key="leftBarButtonItem" image="ic_back" id="K04-d9-GP0">
                             <color key="tintColor" red="0.015686274510000001" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="backAction:" destination="Kc9-bR-AGx" id="xXq-4N-twz"/>
@@ -372,6 +372,7 @@
                             <color key="tintColor" red="0.015686274510000001" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="onEditAction:" destination="pd9-Bu-dV7" id="bcQ-oX-tHv"/>
+                                <segue destination="WTp-Ny-7az" kind="show" identifier="UpdateProfileVC" id="LTb-LW-7kT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -469,7 +470,9 @@
                             <constraint firstItem="Qq5-Lb-IDg" firstAttribute="centerX" secondItem="Hd8-Ar-F9W" secondAttribute="centerX" id="z1V-Fa-gPJ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="search_unselect" selectedImage="search" id="rCh-tm-R4q"/>
+                    <tabBarItem key="tabBarItem" title="" image="search_unselect" selectedImage="search" id="rCh-tm-R4q">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="blurView" destination="4N3-Hi-Oj5" id="FYd-Lo-ocX"/>
                         <outlet property="findPartnerButton" destination="Qq5-Lb-IDg" id="8QR-5K-IHY"/>
@@ -805,7 +808,7 @@
             </objects>
             <point key="canvasLocation" x="-1190" y="1697"/>
         </scene>
-        <!--Country Picker View Controller-->
+        <!--Country-->
         <scene sceneID="h5d-WM-PS7">
             <objects>
                 <viewController id="OWF-bY-gcc" customClass="CountryPickerViewController" customModule="wespeak" customModuleProvider="target" sceneMemberID="viewController">
@@ -818,7 +821,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5bk-rV-SD4">
-                                <rect key="frame" x="0.0" y="72" width="320" height="496"/>
+                                <rect key="frame" x="0.0" y="116" width="320" height="403"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="countryCell" rowHeight="83" id="mEZ-hi-7cS" customClass="CountryCell" customModule="wespeak" customModuleProvider="target">
@@ -857,41 +860,20 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j5F-bF-iav">
-                                <rect key="frame" x="0.0" y="20" width="320" height="52"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="52"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Country" translatesAutoresizingMaskIntoConstraints="NO" id="SEe-aS-dGZ">
-                                        <rect key="frame" x="34" y="4" width="230" height="44"/>
+                                        <rect key="frame" x="8" y="8" width="304" height="36"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1E-nh-BWj">
-                                        <rect key="frame" x="264" y="0.0" width="48" height="52"/>
-                                        <state key="normal" title="Cancel">
-                                            <color key="titleColor" red="0.015686274510000001" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZS-Rk-vkM">
-                                        <rect key="frame" x="4" y="0.0" width="30" height="52"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="ZB0-qf-r60"/>
-                                        </constraints>
-                                        <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="1"/>
-                                        <state key="normal" image="ic_back"/>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="g1E-nh-BWj" firstAttribute="top" secondItem="j5F-bF-iav" secondAttribute="top" id="0JC-Ka-ArE"/>
-                                    <constraint firstAttribute="trailing" secondItem="g1E-nh-BWj" secondAttribute="trailing" constant="8" id="6Dn-QX-oRg"/>
+                                    <constraint firstItem="SEe-aS-dGZ" firstAttribute="leading" secondItem="j5F-bF-iav" secondAttribute="leading" constant="8" id="281-5v-x9p"/>
                                     <constraint firstAttribute="height" constant="52" id="7su-F5-k56"/>
-                                    <constraint firstItem="SZS-Rk-vkM" firstAttribute="leading" secondItem="j5F-bF-iav" secondAttribute="leading" constant="4" id="826-qm-A7l"/>
-                                    <constraint firstItem="g1E-nh-BWj" firstAttribute="leading" secondItem="SEe-aS-dGZ" secondAttribute="trailing" id="A78-CO-CFv"/>
-                                    <constraint firstAttribute="bottom" secondItem="g1E-nh-BWj" secondAttribute="bottom" id="C4R-Da-Z5h"/>
-                                    <constraint firstAttribute="bottom" secondItem="SZS-Rk-vkM" secondAttribute="bottom" id="DMX-0D-aN9"/>
-                                    <constraint firstItem="SEe-aS-dGZ" firstAttribute="leading" secondItem="SZS-Rk-vkM" secondAttribute="trailing" id="IZt-Jh-sy2"/>
-                                    <constraint firstAttribute="bottom" secondItem="SEe-aS-dGZ" secondAttribute="bottom" constant="4" id="cU5-tu-3JF"/>
-                                    <constraint firstItem="SZS-Rk-vkM" firstAttribute="top" secondItem="j5F-bF-iav" secondAttribute="top" id="oMe-53-NIx"/>
-                                    <constraint firstItem="SEe-aS-dGZ" firstAttribute="top" secondItem="j5F-bF-iav" secondAttribute="top" constant="4" id="tHP-uB-gvV"/>
-                                    <constraint firstItem="g1E-nh-BWj" firstAttribute="centerY" secondItem="j5F-bF-iav" secondAttribute="centerY" id="vqp-F9-rEc"/>
+                                    <constraint firstAttribute="bottom" secondItem="SEe-aS-dGZ" secondAttribute="bottom" constant="8" id="cU5-tu-3JF"/>
+                                    <constraint firstItem="SEe-aS-dGZ" firstAttribute="top" secondItem="j5F-bF-iav" secondAttribute="top" constant="8" id="tHP-uB-gvV"/>
+                                    <constraint firstAttribute="trailing" secondItem="SEe-aS-dGZ" secondAttribute="trailing" constant="8" id="wJR-XC-CQh"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -907,6 +889,14 @@
                             <constraint firstAttribute="trailing" secondItem="j5F-bF-iav" secondAttribute="trailing" id="teQ-A8-1bW"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Country" id="2Fi-mV-2AT">
+                        <barButtonItem key="leftBarButtonItem" image="ic_back" id="zxs-aI-MbS">
+                            <color key="tintColor" red="0.015686274510000001" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="backAction:" destination="OWF-bY-gcc" id="php-CV-BxL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="SEe-aS-dGZ" id="scc-RH-26t"/>
                         <outlet property="tableView" destination="5bk-rV-SD4" id="hBF-x0-JUS"/>
@@ -914,9 +904,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyP-2D-azy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2180.625" y="123.59154929577466"/>
+            <point key="canvasLocation" x="3662" y="3118"/>
         </scene>
-        <!--Update Profile View Controller-->
+        <!--Update Profile-->
         <scene sceneID="HX1-4O-DnT">
             <objects>
                 <viewController storyboardIdentifier="UpdateProfileVC" id="WTp-Ny-7az" customClass="UpdateProfileViewController" customModule="wespeak" customModuleProvider="target" sceneMemberID="viewController">
@@ -944,7 +934,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKS-6e-Xsj">
-                                <rect key="frame" x="30" y="492" width="260" height="48"/>
+                                <rect key="frame" x="30" y="443" width="260" height="48"/>
                                 <color key="backgroundColor" red="0.015686274509803921" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="4MR-xX-mHo"/>
@@ -967,15 +957,14 @@
                                     <color key="titleColor" red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgA-wb-ZpS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgA-wb-ZpS">
                                 <rect key="frame" x="30" y="353" width="260" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="7nP-ka-QPC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Native Language"/>
+                                <state key="normal" title="Native Language" image="AE"/>
                                 <connections>
-                                    <action selector="onTapLanguageButton:" destination="WTp-Ny-7az" eventType="touchUpInside" id="WUN-Y1-WHr"/>
+                                    <segue destination="OWF-bY-gcc" kind="show" identifier="CountryPickerSegue" id="bMe-NR-MEt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -996,17 +985,24 @@
                             <constraint firstAttribute="trailing" secondItem="xKS-6e-Xsj" secondAttribute="trailing" constant="30" id="v7k-vD-8w2"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Update Profile" id="xvd-QE-Xse">
+                        <barButtonItem key="leftBarButtonItem" image="ic_back" id="ZTn-AI-r3A">
+                            <color key="tintColor" red="0.015686274510000001" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="backAction:" destination="WTp-Ny-7az" id="Bl4-5x-kVI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="languageButton" destination="CgA-wb-ZpS" id="39Y-14-P00"/>
                         <outlet property="nameTextField" destination="4kG-lZ-F63" id="wqX-hC-BaX"/>
                         <outlet property="profileImageView" destination="cYh-wM-Tua" id="Tll-OI-3xS"/>
                         <outlet property="updateButton" destination="xKS-6e-Xsj" id="hkX-mv-4MV"/>
-                        <segue destination="OWF-bY-gcc" kind="presentation" identifier="CountryPickerVC" id="TRL-Z2-fOK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ihn-8N-EcV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1117.5999999999999" y="123.68815592203899"/>
+            <point key="canvasLocation" x="2696" y="3119"/>
         </scene>
         <!--Custom Navigation Controller-->
         <scene sceneID="H2c-Ji-b7b">
@@ -1048,7 +1044,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Back Arrow" width="12" height="19"/>
+        <image name="AE" width="21" height="15"/>
         <image name="US" width="21" height="15"/>
         <image name="VN" width="21" height="15"/>
         <image name="avatar" width="480" height="321"/>

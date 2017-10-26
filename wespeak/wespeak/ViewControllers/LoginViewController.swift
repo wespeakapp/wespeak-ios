@@ -42,7 +42,9 @@ class LoginViewController: UIViewController {
                         var user = User()
                         user.nativeLanguage = country
                         self.updateProfile(user: user)
-                    case .failure(_):
+                    case .failure(let error):
+                        let alert = UIAlertController(title: "Login Fail", message: error.message, preferredStyle: .alert)
+                        self.present(alert, animated: true, completion: nil)
                         break
                     }
                 }

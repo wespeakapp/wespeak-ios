@@ -17,10 +17,22 @@ class UpdateProfileViewController: UIViewController {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var updateButton: UIButton!
     
+    var user: User!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        getUser()
+        //setupUI()
+        //getUser()
+    }
+    @IBAction func backAction(_ sender: UIBarButtonItem) {
+        navigationController?.popViewController(animated: true)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = true
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = false
     }
     
     func getUser() {
@@ -28,8 +40,7 @@ class UpdateProfileViewController: UIViewController {
             result in
             switch result {
             case .success(let user):
-                self.nameTextField.text = user.name
-                self.profileImageView.af_setImage(withURL: URL(string:user.profilePicture)!)
+                self.user = user
                 break
             case .failure(let error):
                 break
@@ -47,26 +58,36 @@ class UpdateProfileViewController: UIViewController {
         
         radius = updateButton.frame.height/2
         updateButton.make(cornerRadius: radius)
+        
+        nameTextField.text = user.name
+        if let url = URL(string:user.profilePicture) {
+            profileImageView.af_setImage(withURL: url)
+        }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? CountryPickerViewController {
+            vc.countryCode = "US"
+            vc.didSelectRow = {code in print(code)}
+        }
+    }
     @IBAction func onTapLanguageButton(_ sender: UIButton) {
         performSegue(withIdentifier: "CountryPickerVC", sender: self)
     }
     
     @IBAction func onTapUpdateProfile(_ sender: UIButton) {
-        let user = User(name: nameTextField.text!, nativeLanguage: "Korean", about: "I want to imporove my english")
+        let newUser = User(name: nameTextField.text!, nativeLanguage: user.nativeLanguage, about: "I want to imporove my english")
         let proressHub = MBProgressHUD.showAdded(to: self.view, animated: true)
         proressHub.label.text = "Updating..."
-        APIManager.shareInstance.updateUser(user: user) {
+        APIManager.shareInstance.updateUser(user: newUser) {
             result in
             proressHub.hide(animated: true)
             switch result {
                 case .success(let user):
                     currentUser = user
-                    let rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
-                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                    appDelegate.window?.rootViewController = rootVC
+                    self.navigationController?.popViewController(animated: true)
                 case .failure(let error):
+                    print(error.message)
                     break
             }
         }

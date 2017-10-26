@@ -19,13 +19,17 @@ class ProfileViewController: UIViewController {
         tableView.estimatedRowHeight = 100
         tableView.reloadData()
     }
-    
-    @IBAction func onEditAction(_ sender: UIBarButtonItem) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "UpdateProfileVC") as! UpdateProfileViewController
-        navigationController?.pushViewController(vc,
-                                                 animated: true)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? UpdateProfileViewController {
+            vc.user = currentUser
+        }
     }
+    @IBAction func onEditAction(_ sender: UIBarButtonItem) {
+        //let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //let vc = storyboard.instantiateViewController(withIdentifier: "UpdateProfileVC") as! UpdateProfileViewController
+        //navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func initCells() {
         tableView.register(UINib(nibName: String(describing: ProfileCell.self), bundle: nil) , forCellReuseIdentifier: "ProfileCell")
     }
