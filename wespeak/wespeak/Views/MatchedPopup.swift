@@ -25,6 +25,14 @@ class MatchedPopup: UIView {
     @IBOutlet weak var profilePicture: UIImageView!
     
     weak var delegate: MatchedPopupDelegate?
+    var partner: User! {
+        didSet {
+            nameLabel.text = partner.name
+            if let url = URL(string: partner.profilePicture) {
+                profilePicture.af_setImage(withURL: url)
+            }
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A095FF71FA5C6A500CDAB67 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A095FF61FA5C6A500CDAB67 /* Conversation.swift */; };
 		5A21F0291F88E4CA008B9A2A /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21F0281F88E4CA008B9A2A /* LaunchViewController.swift */; };
 		5A32D34B1F8731910075316C /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A32D34A1F8731910075316C /* APIManager.swift */; };
 		5A32D34E1F8768970075316C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A32D34D1F8768970075316C /* User.swift */; };
@@ -32,6 +33,7 @@
 		5A40EFA11F81F23400059D12 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EFA01F81F23400059D12 /* CustomNavigationController.swift */; };
 		5A40EFA31F828F6400059D12 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EFA21F828F6400059D12 /* CustomTabBarController.swift */; };
 		5A40EFAA1F85406C00059D12 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EFA91F85406C00059D12 /* Token.swift */; };
+		5A6BB3CD1FADBDDD0009567C /* StoryboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6BB3CC1FADBDDD0009567C /* StoryboardManager.swift */; };
 		5AA591C51F760AC500A30614 /* UpdateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA591C41F760AC500A30614 /* UpdateProfileViewController.swift */; };
 		5AA591C71F760EA400A30614 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA591C61F760EA400A30614 /* Color.swift */; };
 		5AA591C91F76486E00A30614 /* FindPartnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA591C81F76486E00A30614 /* FindPartnerViewController.swift */; };
@@ -56,6 +58,7 @@
 /* Begin PBXFileReference section */
 		0F8FE7196325CCE32DFD69B7 /* Pods_wespeak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wespeak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3395349411E1375CD5EB9286 /* Pods-wespeak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wespeak.release.xcconfig"; path = "Pods/Target Support Files/Pods-wespeak/Pods-wespeak.release.xcconfig"; sourceTree = "<group>"; };
+		5A095FF61FA5C6A500CDAB67 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		5A21F0281F88E4CA008B9A2A /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		5A32D34A1F8731910075316C /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		5A32D34D1F8768970075316C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -81,6 +84,7 @@
 		5A40EFA01F81F23400059D12 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		5A40EFA21F828F6400059D12 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		5A40EFA91F85406C00059D12 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		5A6BB3CC1FADBDDD0009567C /* StoryboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardManager.swift; sourceTree = "<group>"; };
 		5AA591C41F760AC500A30614 /* UpdateProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewController.swift; sourceTree = "<group>"; };
 		5AA591C61F760EA400A30614 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		5AA591C81F76486E00A30614 /* FindPartnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPartnerViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 			children = (
 				5A40EFA91F85406C00059D12 /* Token.swift */,
 				5A32D34D1F8768970075316C /* User.swift */,
+				5A095FF61FA5C6A500CDAB67 /* Conversation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 				5ABDCE211F752ABA0009B66B /* Extensions.swift */,
 				5A40EF811F78F9FC00059D12 /* ScreenSize.swift */,
 				5ADE273B1F91CF9D00B648FF /* Language.swift */,
+				5A6BB3CC1FADBDDD0009567C /* StoryboardManager.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -445,6 +451,8 @@
 				5A40EF9A1F81D57B00059D12 /* SenderCell.swift in Sources */,
 				5ABDCE221F752ABA0009B66B /* Extensions.swift in Sources */,
 				5AA591C71F760EA400A30614 /* Color.swift in Sources */,
+				5A095FF71FA5C6A500CDAB67 /* Conversation.swift in Sources */,
+				5A6BB3CD1FADBDDD0009567C /* StoryboardManager.swift in Sources */,
 				5A40EF8F1F7BA0C800059D12 /* ProfileViewController.swift in Sources */,
 				5A40EF921F7BAE7300059D12 /* ProfileCell.swift in Sources */,
 				5A40EF801F78F8BB00059D12 /* CallViewController.swift in Sources */,

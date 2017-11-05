@@ -488,7 +488,7 @@
         <!--Call View Controller-->
         <scene sceneID="wXs-xO-sC5">
             <objects>
-                <viewController id="Wps-Ya-Dqf" customClass="CallViewController" customModule="wespeak" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CallVC" id="Wps-Ya-Dqf" customClass="CallViewController" customModule="wespeak" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wpc-u1-vAC"/>
                         <viewControllerLayoutGuide type="bottom" id="DuO-oV-5bO"/>
@@ -497,6 +497,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bu4-K2-I9C">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIF-dX-cid">
                                 <rect key="frame" x="20" y="32" width="44" height="44"/>
                                 <constraints>
@@ -555,33 +559,30 @@
                                     <constraint firstAttribute="width" constant="110" id="lrb-Q6-DnQ"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user1" translatesAutoresizingMaskIntoConstraints="NO" id="g4p-j0-4jL">
-                                <rect key="frame" x="0.0" y="117" width="320" height="214"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="214" id="Hia-MU-Zhy"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="oOy-oH-LV1" firstAttribute="leading" secondItem="hcs-Cb-Xh3" secondAttribute="trailing" id="6vF-4q-Uad"/>
-                            <constraint firstAttribute="trailing" secondItem="g4p-j0-4jL" secondAttribute="trailing" id="6ym-iD-BbZ"/>
+                            <constraint firstItem="bu4-K2-I9C" firstAttribute="top" secondItem="lJ0-t4-A6p" secondAttribute="top" id="9eO-f7-ZaA"/>
                             <constraint firstItem="DuO-oV-5bO" firstAttribute="top" secondItem="kHA-B2-7Lg" secondAttribute="bottom" constant="20" id="BNs-Jh-Uqi"/>
                             <constraint firstAttribute="trailing" secondItem="kHA-B2-7Lg" secondAttribute="trailing" constant="20" id="KwL-a2-U86"/>
-                            <constraint firstItem="g4p-j0-4jL" firstAttribute="leading" secondItem="lJ0-t4-A6p" secondAttribute="leading" id="RHg-Ab-ivy"/>
                             <constraint firstItem="hcs-Cb-Xh3" firstAttribute="centerY" secondItem="oOy-oH-LV1" secondAttribute="centerY" id="UAt-Rs-D4f"/>
                             <constraint firstItem="oOy-oH-LV1" firstAttribute="centerY" secondItem="zWf-5X-Ftt" secondAttribute="centerY" id="ZWn-VI-cUA"/>
                             <constraint firstItem="bIF-dX-cid" firstAttribute="leading" secondItem="lJ0-t4-A6p" secondAttribute="leading" constant="20" id="ZaW-Nf-dL1"/>
+                            <constraint firstItem="bu4-K2-I9C" firstAttribute="leading" secondItem="lJ0-t4-A6p" secondAttribute="leading" id="c8H-Wj-bna"/>
                             <constraint firstItem="bIF-dX-cid" firstAttribute="top" secondItem="wpc-u1-vAC" secondAttribute="bottom" constant="12" id="dgJ-21-AMu"/>
+                            <constraint firstAttribute="trailing" secondItem="bu4-K2-I9C" secondAttribute="trailing" id="ecD-hl-kJi"/>
                             <constraint firstItem="zWf-5X-Ftt" firstAttribute="top" secondItem="bIF-dX-cid" secondAttribute="top" id="gHP-gi-PAm"/>
                             <constraint firstAttribute="trailing" secondItem="zWf-5X-Ftt" secondAttribute="trailing" constant="20" id="neF-YH-jRE"/>
                             <constraint firstItem="hcs-Cb-Xh3" firstAttribute="leading" secondItem="bIF-dX-cid" secondAttribute="trailing" id="ppT-hG-GvL"/>
                             <constraint firstItem="zWf-5X-Ftt" firstAttribute="leading" secondItem="oOy-oH-LV1" secondAttribute="trailing" constant="20" id="t6h-0f-6Pa"/>
-                            <constraint firstItem="g4p-j0-4jL" firstAttribute="centerY" secondItem="lJ0-t4-A6p" secondAttribute="centerY" constant="-60" id="y1y-Ws-cW1"/>
+                            <constraint firstItem="DuO-oV-5bO" firstAttribute="top" secondItem="bu4-K2-I9C" secondAttribute="bottom" id="weu-o0-CYO"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="micButton" destination="zWf-5X-Ftt" id="1jY-ih-5dX"/>
+                        <outlet property="publisherView" destination="kHA-B2-7Lg" id="Zho-ER-l9x"/>
+                        <outlet property="subscriberView" destination="bu4-K2-I9C" id="ba5-D2-E7K"/>
                         <outlet property="videoButton" destination="oOy-oH-LV1" id="k7q-xx-BAN"/>
                         <segue destination="ayl-YA-e1b" kind="show" identifier="ReviewVCSegue" id="aHH-79-jQv"/>
                     </connections>
@@ -593,7 +594,7 @@
         <!--Review View Controller-->
         <scene sceneID="NnT-wd-AQ1">
             <objects>
-                <viewController id="ayl-YA-e1b" customClass="ReviewViewController" customModule="wespeak" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RatingVC" id="ayl-YA-e1b" customClass="ReviewViewController" customModule="wespeak" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="l83-0e-6xW"/>
                         <viewControllerLayoutGuide type="bottom" id="O4R-pT-Vd6"/>

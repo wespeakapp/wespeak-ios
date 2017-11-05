@@ -28,7 +28,7 @@ struct User {
 }
 
 extension User {
-    static func fromJSON(json: Any) -> User{
+    static func fromJSON(json: Any) -> User {
         let json = JSON(json)
         var user = User()
         if let id = json["_id"].string {

@@ -11,6 +11,7 @@ import UIKit
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initCells()
@@ -19,6 +20,7 @@ class ProfileViewController: UIViewController {
         tableView.estimatedRowHeight = 100
         tableView.reloadData()
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? UpdateProfileViewController {
             vc.user = currentUser

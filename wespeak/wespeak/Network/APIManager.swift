@@ -69,4 +69,46 @@ class APIManager {
             }
         }
     }
+    
+    func findPartner(completionHandle: @escaping(ResultType<Conversation>) -> Void) {
+        Provider.request(.Find()) {
+            result in
+            switch result {
+            case let .success(response):
+                let data = JSON(response.data)
+                if let json = data["data"].dictionaryObject {
+                    let conversation = Conversation(json: JSON(json))
+                    completionHandle(.success(conversation))
+                } else {
+                    completionHandle(.failure(ErrorType.InternalError(error: WSError(json: data))))
+                }
+                
+                break
+            case let .failure(error):
+                completionHandle(.failure(ErrorType.SwiftError(error: error)))
+                break
+            }
+        }
+    }
+    
+    func getConversationInfo(id: String, completionHandle: @escaping(ResultType<Conversation>) -> Void){
+        Provider.request(.GetConversationBy(id: id)) {
+            result in
+            switch result {
+            case let .success(response):
+                let response = JSON(response.data)
+                if let data = response["data"].dictionary {
+                    let conversation = Conversation(json: JSON(data))
+                    completionHandle(.success(conversation))
+                } else {
+                    completionHandle(.failure(ErrorType.InternalError(error: WSError(json: response))))
+                }
+                
+                break
+            case let .failure(error):
+                completionHandle(.failure(ErrorType.SwiftError(error: error)))
+                break
+            }
+        }
+    }
 }
