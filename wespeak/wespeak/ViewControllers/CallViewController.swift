@@ -12,9 +12,10 @@ import OpenTok
 // Replace with your OpenTok API key
 let kApiKey = "45969452"
 // Replace with your generated session ID
-var kSessionId = ""
+var kSessionId = "1_MX40NTk2OTQ1Mn5-MTUxMDM3MzIxNTgwMH5vVWEwb2lES0tnQUt3RHYzZnZ6Vk45Rk5-fg"
 // Replace with your generated token
-var kToken = ""
+var kToken = "T1==cGFydG5lcl9pZD00NTk2OTQ1MiZzZGtfdmVyc2lvbj1kZWJ1Z2dlciZzaWc9NzcyYjkwODVjOGJkZThmZTliNmU1N2M5NTY5MDBjOWNiODNmMzdjYjpzZXNzaW9uX2lkPTFfTVg0ME5UazJPVFExTW41LU1UVXhNRE0zTXpJeE5UZ3dNSDV2VldFd2IybEVTMHRuUVV0M1JIWXpablo2Vms0NVJrNS1mZyZjcmVhdGVfdGltZT0xNTEwMzczMjE1JnJvbGU9bW9kZXJhdG9yJm5vbmNlPTE1MTAzNzMyMTUuODIxMTE3Mzk5MTk1MTMmZXhwaXJlX3RpbWU9MTUxMjk2NTIxNQ=="
+// "T1==cGFydG5lcl9pZD00NTk2OTQ1MiZzZGtfdmVyc2lvbj1kZWJ1Z2dlciZzaWc9ZWFiM2M4NGNhMDVlMmI3NjM5NTc4NzE2MzJkNzRhZTBlOWVhMTQ1MjpzZXNzaW9uX2lkPTFfTVg0ME5UazJPVFExTW41LU1UVXhNRE0zTXpJeE5UZ3dNSDV2VldFd2IybEVTMHRuUVV0M1JIWXpablo2Vms0NVJrNS1mZyZjcmVhdGVfdGltZT0xNTEwMzczNjM1JnJvbGU9bW9kZXJhdG9yJm5vbmNlPTE1MTAzNzM2MzUuODEzODU2OTI1ODA2NyZleHBpcmVfdGltZT0xNTEyOTY1NjM1"
 
 let kWidgetHeight = 180
 let kWidgetWidth = 140
@@ -28,8 +29,8 @@ class CallViewController: UIViewController {
     @IBOutlet weak var publisherView: UIView!
     var conversation: Conversation! {
         didSet {
-            kSessionId = conversation.sessionId
-            kToken = conversation.token
+            //kSessionId = conversation.sessionId
+            //kToken = conversation.token
         }
     }
     
@@ -153,12 +154,18 @@ class CallViewController: UIViewController {
 
 extension CallViewController: MatchedPopupDelegate {
     func start() {
-        getConversationBy(id: conversation.id)
+        doConnect()
+        //getConversationBy(id: conversation.id)
     }
 }
 
 extension CallViewController: EndCallPopupDelegate {
     func endCall() {
+        var error: OTError?
+        defer {
+            processError(error)
+        }
+        session.disconnect(&error)
         performSegue(withIdentifier: "ReviewVCSegue", sender: self)
     }
 }
@@ -191,6 +198,11 @@ extension CallViewController: OTSessionDelegate {
         print("session Failed to connect: \(error.localizedDescription)")
     }
     
+    func session(_ session: OTSession, connectionDestroyed connection: OTConnection) {
+        // TO DO:
+        //End conversation -> Show popup your partner just end conversation,
+        print("connection destroyed")
+    }
 }
 
 // MARK: - OTPublisher delegate callbacks

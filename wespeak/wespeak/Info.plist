@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>&quot;We Speak need to use your Mic&quot;</string>
-	<key>NSCameraUsageDescription</key>
-	<string>&quot;We Speak need to use your Camera&quot;</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -51,6 +47,10 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>"We Speak need to use your Camera"</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>"We Speak need to use your Mic"</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>WeSpeak need to access your picture profile</string>
 	<key>UILaunchStoryboardName</key>

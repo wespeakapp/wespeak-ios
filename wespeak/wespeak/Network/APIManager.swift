@@ -44,7 +44,7 @@ class APIManager {
                     return
                 }
                 
-                let user = User.fromJSON(json: data)
+                let user = User.fromJSON(json: data["user"])
                 completionHandle(ResultType.success(user))
                 break
             case let .failure(error):
@@ -59,12 +59,16 @@ class APIManager {
             result in
             switch result {
             case let .success(response):
-                let data = JSON(response.data)["data"].dictionaryObject
-                let user = User.fromJSON(json: data!)
-                completionHandle(ResultType.success(user))
-                break
+                if (200..<300 ~= response.statusCode ) {
+                    let data = JSON(response.data)["data"].dictionaryObject
+                    let user = User.fromJSON(json: data!)
+                    completionHandle(.success(user))
+                    break
+                } else {
+                    completionHandle(.failure(ErrorType.NetworkError(statusCode: response.statusCode)))
+                }
             case let .failure(error):
-                completionHandle(ResultType.failure(ErrorType.SwiftError(error: error)))
+                completionHandle(.failure(ErrorType.SwiftError(error: error)))
                 break
             }
         }

@@ -6,6 +6,7 @@
 //  Copyright © 2017 Quoc Huy Ngo. All rights reserved.
 //
 import SwiftyJSON
+
 enum ResultType<T> {
     case success(T)
     case failure(ErrorType)

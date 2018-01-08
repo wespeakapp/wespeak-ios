@@ -29,7 +29,7 @@ enum APIService {
 
 extension APIService: TargetType {
     var baseURL: URL { return URL(string:"http://35.188.157.198:3000/api/v1/")!}
-    
+    //var baseURL: URL { return URL(string:"http://www.mocky.io/v2/")}
     public var path: String {
         switch self {
         //User Info

@@ -13,6 +13,7 @@ class ConversationCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var flagImageView: UIImageView!
     @IBOutlet weak var profilePicture: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         profilePicture.make(cornerRadius: profilePicture.frame.height/2)
@@ -20,7 +21,6 @@ class ConversationCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
 

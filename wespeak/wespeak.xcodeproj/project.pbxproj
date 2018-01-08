@@ -33,7 +33,10 @@
 		5A40EFA11F81F23400059D12 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EFA01F81F23400059D12 /* CustomNavigationController.swift */; };
 		5A40EFA31F828F6400059D12 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EFA21F828F6400059D12 /* CustomTabBarController.swift */; };
 		5A40EFAA1F85406C00059D12 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EFA91F85406C00059D12 /* Token.swift */; };
+		5A42816C1FBC8FBC00BC9066 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A42816B1FBC8FBC00BC9066 /* GoogleService-Info.plist */; };
+		5A659E4B1FC11B5D00DD9A46 /* RequestCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A659E4A1FC11B5D00DD9A46 /* RequestCallViewController.swift */; };
 		5A6BB3CD1FADBDDD0009567C /* StoryboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6BB3CC1FADBDDD0009567C /* StoryboardManager.swift */; };
+		5A7A3D7A1FBFC3D6000FE5C4 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7A3D791FBFC3D6000FE5C4 /* FirebaseManager.swift */; };
 		5AA591C51F760AC500A30614 /* UpdateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA591C41F760AC500A30614 /* UpdateProfileViewController.swift */; };
 		5AA591C71F760EA400A30614 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA591C61F760EA400A30614 /* Color.swift */; };
 		5AA591C91F76486E00A30614 /* FindPartnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA591C81F76486E00A30614 /* FindPartnerViewController.swift */; };
@@ -84,7 +87,10 @@
 		5A40EFA01F81F23400059D12 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		5A40EFA21F828F6400059D12 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		5A40EFA91F85406C00059D12 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		5A42816B1FBC8FBC00BC9066 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5A659E4A1FC11B5D00DD9A46 /* RequestCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCallViewController.swift; sourceTree = "<group>"; };
 		5A6BB3CC1FADBDDD0009567C /* StoryboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardManager.swift; sourceTree = "<group>"; };
+		5A7A3D791FBFC3D6000FE5C4 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		5AA591C41F760AC500A30614 /* UpdateProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewController.swift; sourceTree = "<group>"; };
 		5AA591C61F760EA400A30614 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		5AA591C81F76486E00A30614 /* FindPartnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPartnerViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +136,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		5A7A3D781FBFC3B6000FE5C4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5A7A3D791FBFC3D6000FE5C4 /* FirebaseManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		5ABDCDF91F751E220009B66B = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +165,7 @@
 		5ABDCE041F751E220009B66B /* wespeak */ = {
 			isa = PBXGroup;
 			children = (
+				5A7A3D781FBFC3B6000FE5C4 /* Utils */,
 				5ABDCE201F752A980009B66B /* Extensions */,
 				5ABDCE171F7521610009B66B /* Models */,
 				5A32D3491F87317A0075316C /* Network */,
@@ -161,6 +176,7 @@
 				5ABDCE0C1F751E220009B66B /* Assets.xcassets */,
 				5ADE273D1F91E2B700B648FF /* CountryCode.plist */,
 				5ABDCE111F751E220009B66B /* Info.plist */,
+				5A42816B1FBC8FBC00BC9066 /* GoogleService-Info.plist */,
 				5ABDCE0E1F751E220009B66B /* LaunchScreen.storyboard */,
 			);
 			path = wespeak;
@@ -192,6 +208,7 @@
 				5A21F0281F88E4CA008B9A2A /* LaunchViewController.swift */,
 				5ADE27411F92228D00B648FF /* CountryPickerViewController.swift */,
 				5ADE27431F93357B00B648FF /* UpdateProfileViewModel.swift */,
+				5A659E4A1FC11B5D00DD9A46 /* RequestCallViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -327,6 +344,7 @@
 				5ABDCE1F1F7523D40009B66B /* FacebookLoginButton.xib in Resources */,
 				5A40EF931F7BAE7300059D12 /* ProfileCell.xib in Resources */,
 				5A40EF851F79665B00059D12 /* EndCallPopup.xib in Resources */,
+				5A42816C1FBC8FBC00BC9066 /* GoogleService-Info.plist in Resources */,
 				5ADE273E1F91E53A00B648FF /* CountryCode.plist in Resources */,
 				5A40EF7C1F78F2AC00059D12 /* MatchedPopup.xib in Resources */,
 			);
@@ -435,7 +453,9 @@
 				5A32D3501F87836D0075316C /* APIService.swift in Sources */,
 				5AA591C91F76486E00A30614 /* FindPartnerViewController.swift in Sources */,
 				5ABDCE061F751E220009B66B /* AppDelegate.swift in Sources */,
+				5A7A3D7A1FBFC3D6000FE5C4 /* FirebaseManager.swift in Sources */,
 				5A40EF8B1F7A44B700059D12 /* CancelButton.swift in Sources */,
+				5A659E4B1FC11B5D00DD9A46 /* RequestCallViewController.swift in Sources */,
 				5A21F0291F88E4CA008B9A2A /* LaunchViewController.swift in Sources */,
 				5A32D34B1F8731910075316C /* APIManager.swift in Sources */,
 				5ADE27401F92224B00B648FF /* CountryCell.swift in Sources */,
@@ -587,7 +607,7 @@
 				INFOPLIST_FILE = wespeak/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = quochuyngo.wespeak;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wespeak.WeSpeak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -602,7 +622,7 @@
 				INFOPLIST_FILE = wespeak/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = quochuyngo.wespeak;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wespeak.WeSpeak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

@@ -16,8 +16,13 @@ class StoryboardManager: NSObject {
         return UIStoryboard(name: "Main", bundle: nil)
     }
     
-    func getCellVC() -> CallViewController? {
+    func getCallVC() -> CallViewController? {
         let storyboard = getStoryBoard()
         return storyboard.instantiateViewController(withIdentifier: "CallVC") as? CallViewController
+    }
+    
+    func getRequestCallVC() -> RequestCallViewController? {
+        let storyboard = getStoryBoard()
+        return storyboard.instantiateViewController(withIdentifier: "RequestCallVC") as? RequestCallViewController
     }
 }

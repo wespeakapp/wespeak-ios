@@ -18,6 +18,9 @@ class LaunchViewController: UIViewController {
     
     func loadData() {
         indicator.startAnimating()
+        let rootVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = rootVC
         APIManager.shareInstance.getUser {
             result in
             switch result {

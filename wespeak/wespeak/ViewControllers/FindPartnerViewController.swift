@@ -8,6 +8,9 @@
 
 import UIKit
 import KDCircularProgress
+import FirebaseDatabase
+import SwiftyJSON
+var ref: DatabaseReference = Database.database().reference()
 
 class FindPartnerViewController: UIViewController {
 
@@ -23,6 +26,7 @@ class FindPartnerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        //listenCallComming()
     }
     
     func setupViews() {
@@ -33,28 +37,66 @@ class FindPartnerViewController: UIViewController {
         //addCircle()
     }
     
+    func listenCallComming() {
+        ref.child("user").child(currentUser.id).observe(.value, with: {
+            snapshot in
+            let value = JSON(snapshot.value as! NSDictionary) //
+            //found partner
+            if !value["conversationId"].stringValue.isEmpty {
+                //learner call
+                if value["isFind"].boolValue {
+                    APIManager.shareInstance.findPartner(completionHandle: {
+                        result in
+                        switch result {
+                        case .success(let conversation):
+                            print(conversation)
+                            guard let callVC = StoryboardManager.sharedInstance.getCallVC() else { return }
+                            self.stopFinding()
+                            callVC.conversation = conversation
+                            self.present(callVC, animated: true, completion: nil)
+                            break
+                        case .failure(let error):
+                            self.stopFinding()
+                            print(error.message)
+                        }
+                    })
+                    
+                } else {
+                  //receive call request just show popup
+                    guard let requestCallVC = StoryboardManager.sharedInstance.getRequestCallVC() else { return }
+                    self.present(requestCallVC, animated: true, completion: nil)
+                }
+            }
+        })
+    }
+    
     @IBAction func stopFindAction(_ sender: UIButton) {
-        
+        stopFinding()
     }
     
     @IBAction func findAction(_ sender: UIButton) {
         
-        
-        //Call API to find partner
-        APIManager.shareInstance.findPartner(completionHandle: {
-            result in
-            switch result {
-            case .success(let conversation):
-                print(conversation)
-                guard let callVC = StoryboardManager.sharedInstance.getCellVC() else { return }
-                callVC.conversation = conversation
-                self.present(callVC, animated: true, completion: nil)
-                break
-            case .failure(let error):
-                self.stopFinding()
-                print(error.message)
-            }
-        })
+        findPartner()
+//        guard let callVC = StoryboardManager.sharedInstance.getCallVC() else { return }
+//        self.stopFinding()
+//        callVC.conversation = conversation
+//        self.present(callVC, animated: true, completion: nil)
+        //Call API to change status
+//        APIManager.shareInstance.findPartner(completionHandle: {
+//            result in
+//            switch result {
+//            case .success(let conversation):
+//                print(conversation)
+//                guard let callVC = StoryboardManager.sharedInstance.getCallVC() else { return }
+//                self.stopFinding()
+//                callVC.conversation = conversation
+//                self.present(callVC, animated: true, completion: nil)
+//                break
+//            case .failure(let error):
+//                self.stopFinding()
+//                print(error.message)
+//            }
+//        })
     }
     
     func animate() {

@@ -9,6 +9,8 @@
 import UIKit
 import FBSDKCoreKit
 import FacebookCore
+import FirebaseDatabase
+import Firebase
 
 extension UIApplication {
     var statusBarView: UIView? {
@@ -27,11 +29,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         //UIApplication.shared.statusBarView?.backgroundColor = Colors.mainColor
         
+        //connect firebase and observerse
+        FirebaseApp.configure()
         if Token.token == nil {
             let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.window?.rootViewController = loginVC
         }
+    
         return true
     }
     
@@ -61,7 +66,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 
