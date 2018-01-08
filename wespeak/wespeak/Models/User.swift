@@ -9,6 +9,7 @@
 import Foundation
 import SwiftyJSON
 
+var currentUser = User()
 struct User {
     var id: String = ""
     var name: String = ""
@@ -17,10 +18,17 @@ struct User {
     var about: String = ""
     var profilePicture: String = ""
     
+    init() {}
+    
+    init(name:String, nativeLanguage:String, about:String) {
+        self.name = name
+        self.nativeLanguage = nativeLanguage
+        self.about = about
+    }
 }
 
 extension User {
-    static func fromJSON(json: Any) -> User{
+    static func fromJSON(json: Any) -> User {
         let json = JSON(json)
         var user = User()
         if let id = json["_id"].string {

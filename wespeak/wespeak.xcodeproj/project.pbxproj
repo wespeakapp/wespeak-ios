@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A095FF71FA5C6A500CDAB67 /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A095FF61FA5C6A500CDAB67 /* Conversation.swift */; };
+		5A21F0291F88E4CA008B9A2A /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21F0281F88E4CA008B9A2A /* LaunchViewController.swift */; };
 		5A32D34B1F8731910075316C /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A32D34A1F8731910075316C /* APIManager.swift */; };
 		5A32D34E1F8768970075316C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A32D34D1F8768970075316C /* User.swift */; };
 		5A32D3501F87836D0075316C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A32D34F1F87836D0075316C /* APIService.swift */; };
@@ -31,6 +33,7 @@
 		5A40EFA11F81F23400059D12 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EFA01F81F23400059D12 /* CustomNavigationController.swift */; };
 		5A40EFA31F828F6400059D12 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EFA21F828F6400059D12 /* CustomTabBarController.swift */; };
 		5A40EFAA1F85406C00059D12 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A40EFA91F85406C00059D12 /* Token.swift */; };
+		5A6BB3CD1FADBDDD0009567C /* StoryboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6BB3CC1FADBDDD0009567C /* StoryboardManager.swift */; };
 		5AA591C51F760AC500A30614 /* UpdateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA591C41F760AC500A30614 /* UpdateProfileViewController.swift */; };
 		5AA591C71F760EA400A30614 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA591C61F760EA400A30614 /* Color.swift */; };
 		5AA591C91F76486E00A30614 /* FindPartnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA591C81F76486E00A30614 /* FindPartnerViewController.swift */; };
@@ -44,14 +47,21 @@
 		5ABDCE1D1F7523BE0009B66B /* FacebookLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDCE1C1F7523BE0009B66B /* FacebookLoginButton.swift */; };
 		5ABDCE1F1F7523D40009B66B /* FacebookLoginButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ABDCE1E1F7523D40009B66B /* FacebookLoginButton.xib */; };
 		5ABDCE221F752ABA0009B66B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDCE211F752ABA0009B66B /* Extensions.swift */; };
+		5ADE273C1F91CF9D00B648FF /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE273B1F91CF9D00B648FF /* Language.swift */; };
+		5ADE273E1F91E53A00B648FF /* CountryCode.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5ADE273D1F91E2B700B648FF /* CountryCode.plist */; };
+		5ADE27401F92224B00B648FF /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE273F1F92224B00B648FF /* CountryCell.swift */; };
+		5ADE27421F92228D00B648FF /* CountryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE27411F92228D00B648FF /* CountryPickerViewController.swift */; };
+		5ADE27441F93357B00B648FF /* UpdateProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE27431F93357B00B648FF /* UpdateProfileViewModel.swift */; };
 		B1DF397DFBFE4518CFCBB5C4 /* Pods_wespeak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8FE7196325CCE32DFD69B7 /* Pods_wespeak.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0F8FE7196325CCE32DFD69B7 /* Pods_wespeak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wespeak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3395349411E1375CD5EB9286 /* Pods-wespeak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wespeak.release.xcconfig"; path = "Pods/Target Support Files/Pods-wespeak/Pods-wespeak.release.xcconfig"; sourceTree = "<group>"; };
+		5A095FF61FA5C6A500CDAB67 /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		5A21F0281F88E4CA008B9A2A /* LaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		5A32D34A1F8731910075316C /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		5A32D34D1F8768970075316C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = User.swift; sourceTree = "<group>"; };
+		5A32D34D1F8768970075316C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5A32D34F1F87836D0075316C /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		5A32D3511F87DBBE0075316C /* ErrorHandle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandle.swift; sourceTree = "<group>"; };
 		5A40EF7B1F78F2AC00059D12 /* MatchedPopup.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchedPopup.xib; sourceTree = "<group>"; };
@@ -74,6 +84,7 @@
 		5A40EFA01F81F23400059D12 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		5A40EFA21F828F6400059D12 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		5A40EFA91F85406C00059D12 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		5A6BB3CC1FADBDDD0009567C /* StoryboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardManager.swift; sourceTree = "<group>"; };
 		5AA591C41F760AC500A30614 /* UpdateProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewController.swift; sourceTree = "<group>"; };
 		5AA591C61F760EA400A30614 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		5AA591C81F76486E00A30614 /* FindPartnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPartnerViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +100,11 @@
 		5ABDCE1C1F7523BE0009B66B /* FacebookLoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookLoginButton.swift; sourceTree = "<group>"; };
 		5ABDCE1E1F7523D40009B66B /* FacebookLoginButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FacebookLoginButton.xib; sourceTree = "<group>"; };
 		5ABDCE211F752ABA0009B66B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5ADE273B1F91CF9D00B648FF /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		5ADE273D1F91E2B700B648FF /* CountryCode.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = CountryCode.plist; sourceTree = "<group>"; };
+		5ADE273F1F92224B00B648FF /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
+		5ADE27411F92228D00B648FF /* CountryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerViewController.swift; sourceTree = "<group>"; };
+		5ADE27431F93357B00B648FF /* UpdateProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewModel.swift; sourceTree = "<group>"; };
 		A5F268CC91420C59A57E2AE4 /* Pods-wespeak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wespeak.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wespeak/Pods-wespeak.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,7 +127,6 @@
 				5A32D34F1F87836D0075316C /* APIService.swift */,
 				5A32D3511F87DBBE0075316C /* ErrorHandle.swift */,
 			);
-			name = Network;
 			path = Network;
 			sourceTree = "<group>";
 		};
@@ -144,6 +159,7 @@
 				5ABDCE191F7521790009B66B /* Views */,
 				5ABDCE051F751E220009B66B /* AppDelegate.swift */,
 				5ABDCE0C1F751E220009B66B /* Assets.xcassets */,
+				5ADE273D1F91E2B700B648FF /* CountryCode.plist */,
 				5ABDCE111F751E220009B66B /* Info.plist */,
 				5ABDCE0E1F751E220009B66B /* LaunchScreen.storyboard */,
 			);
@@ -155,6 +171,7 @@
 			children = (
 				5A40EFA91F85406C00059D12 /* Token.swift */,
 				5A32D34D1F8768970075316C /* User.swift */,
+				5A095FF61FA5C6A500CDAB67 /* Conversation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,6 +189,9 @@
 				5A40EF8E1F7BA0C800059D12 /* ProfileViewController.swift */,
 				5A40EF8C1F7B57B900059D12 /* ReviewViewController.swift */,
 				5AA591C41F760AC500A30614 /* UpdateProfileViewController.swift */,
+				5A21F0281F88E4CA008B9A2A /* LaunchViewController.swift */,
+				5ADE27411F92228D00B648FF /* CountryPickerViewController.swift */,
+				5ADE27431F93357B00B648FF /* UpdateProfileViewModel.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -194,6 +214,7 @@
 				5A40EF911F7BAE7300059D12 /* ProfileCell.xib */,
 				5A40EF9B1F81D5B500059D12 /* ReceiverCell.swift */,
 				5A40EF991F81D57B00059D12 /* SenderCell.swift */,
+				5ADE273F1F92224B00B648FF /* CountryCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,6 +233,8 @@
 				5AA591C61F760EA400A30614 /* Color.swift */,
 				5ABDCE211F752ABA0009B66B /* Extensions.swift */,
 				5A40EF811F78F9FC00059D12 /* ScreenSize.swift */,
+				5ADE273B1F91CF9D00B648FF /* Language.swift */,
+				5A6BB3CC1FADBDDD0009567C /* StoryboardManager.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -304,6 +327,7 @@
 				5ABDCE1F1F7523D40009B66B /* FacebookLoginButton.xib in Resources */,
 				5A40EF931F7BAE7300059D12 /* ProfileCell.xib in Resources */,
 				5A40EF851F79665B00059D12 /* EndCallPopup.xib in Resources */,
+				5ADE273E1F91E53A00B648FF /* CountryCode.plist in Resources */,
 				5A40EF7C1F78F2AC00059D12 /* MatchedPopup.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,11 +430,15 @@
 				5A40EF9C1F81D5B500059D12 /* ReceiverCell.swift in Sources */,
 				5A40EF9E1F81D7EE00059D12 /* DetailConversationViewController.swift in Sources */,
 				5A40EF8D1F7B57B900059D12 /* ReviewViewController.swift in Sources */,
+				5ADE27441F93357B00B648FF /* UpdateProfileViewModel.swift in Sources */,
+				5ADE27421F92228D00B648FF /* CountryPickerViewController.swift in Sources */,
 				5A32D3501F87836D0075316C /* APIService.swift in Sources */,
 				5AA591C91F76486E00A30614 /* FindPartnerViewController.swift in Sources */,
 				5ABDCE061F751E220009B66B /* AppDelegate.swift in Sources */,
 				5A40EF8B1F7A44B700059D12 /* CancelButton.swift in Sources */,
+				5A21F0291F88E4CA008B9A2A /* LaunchViewController.swift in Sources */,
 				5A32D34B1F8731910075316C /* APIManager.swift in Sources */,
+				5ADE27401F92224B00B648FF /* CountryCell.swift in Sources */,
 				5AA591CD1F76529C00A30614 /* MatchingView.swift in Sources */,
 				5AA591C51F760AC500A30614 /* UpdateProfileViewController.swift in Sources */,
 				5A40EFA31F828F6400059D12 /* CustomTabBarController.swift in Sources */,
@@ -419,9 +447,12 @@
 				5A40EF821F78F9FC00059D12 /* ScreenSize.swift in Sources */,
 				5A40EFAA1F85406C00059D12 /* Token.swift in Sources */,
 				5A40EF951F7E012F00059D12 /* ConversationViewController.swift in Sources */,
+				5ADE273C1F91CF9D00B648FF /* Language.swift in Sources */,
 				5A40EF9A1F81D57B00059D12 /* SenderCell.swift in Sources */,
 				5ABDCE221F752ABA0009B66B /* Extensions.swift in Sources */,
 				5AA591C71F760EA400A30614 /* Color.swift in Sources */,
+				5A095FF71FA5C6A500CDAB67 /* Conversation.swift in Sources */,
+				5A6BB3CD1FADBDDD0009567C /* StoryboardManager.swift in Sources */,
 				5A40EF8F1F7BA0C800059D12 /* ProfileViewController.swift in Sources */,
 				5A40EF921F7BAE7300059D12 /* ProfileCell.swift in Sources */,
 				5A40EF801F78F8BB00059D12 /* CallViewController.swift in Sources */,

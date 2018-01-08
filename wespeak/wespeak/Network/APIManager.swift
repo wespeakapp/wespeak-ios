@@ -11,8 +11,6 @@ import SwiftyJSON
 class APIManager {
     
     static let shareInstance = APIManager()
-    //var provider: MoyaProvider<APIService> = MoyaProvider(endpointClosure: endPointClosure)
-    
     
     func loginFB(token:String, completionHandle: @escaping (ResultType<String>) -> Void) {
         Provider.request(.LoginFB(token: token)) {
@@ -23,20 +21,42 @@ class APIManager {
                 let json = JSON(data)
                 if let token = json["access_token"].string {
                     Token.token = token
-                    completionHandle(ResultType.success(token))
+                    completionHandle(.success(token))
                 } else {
-                    completionHandle(ResultType.failure(ErrorType.NetworkError(statusCode: 400)))
+                    completionHandle(.failure(ErrorType.InternalError(error: WSError(json: json))))
                 }
                 break
             case .failure(let error):
+                completionHandle(.failure(ErrorType.SwiftError(error: error)))
+                break
+            }
+        }
+    }
+    
+    func getUser(completionHandle: @escaping (ResultType<User>) -> Void) {
+        Provider.request(.GetUser()){ result in
+            switch result {
+            case let .success(response):
+                guard let data = JSON(response.data)["data"].dictionaryObject else {
+                    let json = JSON(response.data)
+                    let wsError = WSError(json: json)
+                    completionHandle(ResultType.failure(ErrorType.InternalError(error: wsError)))
+                    return
+                }
+                
+                let user = User.fromJSON(json: data)
+                completionHandle(ResultType.success(user))
+                break
+            case let .failure(error):
                 completionHandle(ResultType.failure(ErrorType.SwiftError(error: error)))
                 break
             }
         }
     }
     
-    func getUserInfo(completionHandle: @escaping (ResultType<User>) -> Void) {
-        Provider.request(.GetUserInfo()){ result in
+    func updateUser(user:User, completionHandle: @escaping (ResultType<User>) -> Void) {
+        Provider.request(.UpdateUser(user: user)) {
+            result in
             switch result {
             case let .success(response):
                 let data = JSON(response.data)["data"].dictionaryObject
@@ -45,6 +65,48 @@ class APIManager {
                 break
             case let .failure(error):
                 completionHandle(ResultType.failure(ErrorType.SwiftError(error: error)))
+                break
+            }
+        }
+    }
+    
+    func findPartner(completionHandle: @escaping(ResultType<Conversation>) -> Void) {
+        Provider.request(.Find()) {
+            result in
+            switch result {
+            case let .success(response):
+                let data = JSON(response.data)
+                if let json = data["data"].dictionaryObject {
+                    let conversation = Conversation(json: JSON(json))
+                    completionHandle(.success(conversation))
+                } else {
+                    completionHandle(.failure(ErrorType.InternalError(error: WSError(json: data))))
+                }
+                
+                break
+            case let .failure(error):
+                completionHandle(.failure(ErrorType.SwiftError(error: error)))
+                break
+            }
+        }
+    }
+    
+    func getConversationInfo(id: String, completionHandle: @escaping(ResultType<Conversation>) -> Void){
+        Provider.request(.GetConversationBy(id: id)) {
+            result in
+            switch result {
+            case let .success(response):
+                let response = JSON(response.data)
+                if let data = response["data"].dictionary {
+                    let conversation = Conversation(json: JSON(data))
+                    completionHandle(.success(conversation))
+                } else {
+                    completionHandle(.failure(ErrorType.InternalError(error: WSError(json: response))))
+                }
+                
+                break
+            case let .failure(error):
+                completionHandle(.failure(ErrorType.SwiftError(error: error)))
                 break
             }
         }

@@ -32,33 +32,29 @@ class FindPartnerViewController: UIViewController {
         findPartnerButton.make(cornerRadius: radius, boderWidth: 2.0, boderColor: Colors.mainColor)
         //addCircle()
     }
-
+    
     @IBAction func stopFindAction(_ sender: UIButton) {
-        UIView.animate(withDuration: 1, delay: 0, options: [], animations: {
-            self.blurView.alpha = 0
-            self.findPartnerButton.isEnabled = true
-            self.findPartnerButton.setTitle("Search", for: .normal)
-            self.findPartnerButton.backgroundColor = Colors.mainColor
-            self.titleLabel.text = self.titleFind
-            guard let tabbar = self.tabBarController?.tabBar else { return }
-            tabbar.transform = CGAffineTransform(translationX: tabbar.frame.origin.x, y: 0)
-        }, completion: {
-            completed in
-            self.performSegue(withIdentifier: "CallVCSegue", sender: self)
-        })
+        
     }
     
     @IBAction func findAction(_ sender: UIButton) {
-        UIView.animate(withDuration: 1, delay: 0, options: [], animations: {
-            self.blurView.alpha = 1
-            self.findPartnerButton.isEnabled = false
-            self.findPartnerButton.backgroundColor = UIColor.clear
-            self.findPartnerButton.setTitle("Searching", for: .normal)
-            self.titleLabel.text = self.titleFinding
-            guard let tabbar = self.tabBarController?.tabBar else { return }
-            tabbar.transform = CGAffineTransform(translationX: tabbar.frame.origin.x, y: tabbar.frame.height)
-        }, completion: nil)
-        //animate()
+        
+        
+        //Call API to find partner
+        APIManager.shareInstance.findPartner(completionHandle: {
+            result in
+            switch result {
+            case .success(let conversation):
+                print(conversation)
+                guard let callVC = StoryboardManager.sharedInstance.getCellVC() else { return }
+                callVC.conversation = conversation
+                self.present(callVC, animated: true, completion: nil)
+                break
+            case .failure(let error):
+                self.stopFinding()
+                print(error.message)
+            }
+        })
     }
     
     func animate() {
@@ -88,4 +84,33 @@ class FindPartnerViewController: UIViewController {
     }
     
     @IBAction func unwindToFindVC(segue:UIStoryboardSegue) { }
+}
+
+extension FindPartnerViewController {
+    func findPartner() {
+        UIView.animate(withDuration: 1, delay: 0, options: [], animations: {
+            self.blurView.alpha = 1
+            self.findPartnerButton.isEnabled = false
+            self.findPartnerButton.backgroundColor = UIColor.clear
+            self.findPartnerButton.setTitle("Searching", for: .normal)
+            self.titleLabel.text = self.titleFinding
+            guard let tabbar = self.tabBarController?.tabBar else { return }
+            tabbar.transform = CGAffineTransform(translationX: tabbar.frame.origin.x, y: tabbar.frame.height)
+        }, completion: nil)
+    }
+    
+    func stopFinding() {
+        UIView.animate(withDuration: 1, delay: 0, options: [], animations: {
+            self.blurView.alpha = 0
+            self.findPartnerButton.isEnabled = true
+            self.findPartnerButton.setTitle("Search", for: .normal)
+            self.findPartnerButton.backgroundColor = Colors.mainColor
+            self.titleLabel.text = self.titleFind
+            guard let tabbar = self.tabBarController?.tabBar else { return }
+            tabbar.transform = CGAffineTransform(translationX: tabbar.frame.origin.x, y: 0)
+        }, completion: {
+            completed in
+            
+        })
+    }
 }

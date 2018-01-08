@@ -11,11 +11,20 @@ import Alamofire
 import Moya
 
 typealias TargetType = Moya.TargetType
+typealias Method = Moya.Method
+
 let Provider = MoyaProvider<APIService>(endpointClosure: endPointClosure)
 
 enum APIService {
+    //user info
     case LoginFB(token: String)
-    case GetUserInfo()
+    case GetUser()
+    case UpdateUser(user: User)
+    
+    //conversation
+    case Find()
+    case StopConversationBy(id: String)
+    case GetConversationBy(id: String)
 }
 
 extension APIService: TargetType {
@@ -23,19 +32,39 @@ extension APIService: TargetType {
     
     public var path: String {
         switch self {
+        //User Info
         case .LoginFB(_):
             return "login"
-        case .GetUserInfo():
+        case .GetUser():
             return "user/profile"
+        case .UpdateUser(_):
+            return "user"
+            
+        //Conversation
+        case .Find():
+            return "conversation/find"
+        case .StopConversationBy(let id):
+            return "conversation/\(id)/stop"
+        case .GetConversationBy(_):
+            return "conversation"
         }
     }
     
-    public var method: Moya.Method {
+    public var method: Method {
         switch self {
         case .LoginFB(_):
             return .get
-        case .GetUserInfo():
+        case .GetUser():
             return .get
+        case .UpdateUser(_):
+            return .put
+            
+        case .Find():
+            return .post
+        case .StopConversationBy(_):
+            return .put
+        case .GetConversationBy(_):
+            return .post
         }
     }
     
@@ -50,6 +79,24 @@ extension APIService: TargetType {
         switch self {
         case .LoginFB(let token):
             return .requestParameters(parameters: ["accessToken":token], encoding: URLEncoding.default)
+        case .UpdateUser(let user):
+            var params = [String:String]()
+            if !user.name.isEmpty {
+                params["name"] = user.name
+            }
+            if !user.about.isEmpty {
+                params["about"] = user.about
+            }
+            if !user.nativeLanguage.isEmpty {
+                params["nativeLanguage"] = user.nativeLanguage
+            }
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+        case .StopConversationBy(_):
+            let params = ["status":"stop"]
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+        case .GetConversationBy(let id):
+            let params = ["conversationId": id]
+            return .requestParameters(parameters: params, encoding: JSONEncoding.default)
         default:
             return .requestPlain
         }
